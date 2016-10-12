@@ -10,25 +10,19 @@ class HomeWorkSecond {
     static int mas[] = {1,5,3,2,11,4,5,2,4,8,9,1};
 
     public static void main(String[] args) {
-        System.out.println("First task - " + taskOne());
+        taskOne();
         System.out.println("Second task - " + taskTwo());
         System.out.println("Third task - " + taskThree());
         System.out.println("Fourth task - " + taskFour());
         System.out.println(taskFive());
     }
 
-    static String taskOne(){ // программа работает, но не понял, почему не надо было в скобках заявлять о переменной.
-        int firstLength = first.length;
-        for (int i = 0 ; i < firstLength; i++){
-            if (first[i] == 0){
-                first[i] = 1;
-            }
-            else {
-                first[i] = 0;
-            }
+    static void taskOne(){
+
+        for (int i = 0 ; i < first.length; i++){
+            first[i] = (first[i] == 0) ? 1 : 0;  //add ternary operator
         }
-        String firstString = Arrays.toString(first);
-        return firstString;
+        System.out.println(Arrays.toString(first));
     }
 
     static String taskTwo(){
